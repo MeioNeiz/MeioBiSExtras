@@ -30,6 +30,11 @@ Settings: Esc > Options > AddOns > MeioBiSExtras.
 - `/bisorder settings`: the Settings panel
 - `/bisorder help`: every command
 
+## Coming soon
+
+- Click a Character slot for where to get its upgrade
+- Works with Forever Leveling BiS 1.5.0
+
 ## Forever Leveling BiS
 
 You need [Forever Leveling BiS](https://www.curseforge.com/projects/1719370). Slot standing
