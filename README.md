@@ -22,6 +22,9 @@ With a one-off patch to Forever Leveling BiS (below):
   BiS, or its % of the best you can get now, in Forever Leveling BiS's colours
 - Best in slot lists BoE first, or the sources in any order you pick
 
+![The Character frame with each slot's standing on its icon: BiS, or a % of the best you can
+get now, such as 28% on the helm](docs/slots.png)
+
 Settings: Esc > Options > AddOns > MeioBiSExtras.
 
 - `/bisorder <sources>`: list these first on Best in slot, e.g. `/bisorder quest boe`
