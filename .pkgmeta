@@ -1,0 +1,14 @@
+package-as: MeioBiSExtras
+
+move-folders:
+  MeioBiSExtras/addons/MeioBiSExtras: MeioBiSExtras
+
+ignore:
+  - docs
+  - patches
+  - mods.ps1
+  - README.md
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown

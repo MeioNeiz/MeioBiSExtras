@@ -1,0 +1,14 @@
+Title: Forever Leveling BiS source order reachable (for MeioBiSExtras' /bisorder)
+Why: the Best in slot tab lists its sources (Quest, Dungeon, Crafted, BoE, Vendor, PvP in v1.4.4) in the
+order of ns.SourceTypes, a table in the addon's private namespace. Exposed as a global so the overlay can
+reorder it in place before the window is built (Settings' source cards follow the same table). Anchored
+on the start of the labels line so a new source type doesn't break it.
+
+=== FILE ForeverLevelingBiS\Scoring.lua
+=== INLINE
+--- OLD
+ns.SourceLabels = {
+--- NEW
+ForeverLevelingBiS_SourceTypes = ns.SourceTypes -- LOCAL FIX: LevelingBiSExtras reorders it
+ns.SourceLabels = {
+=== END

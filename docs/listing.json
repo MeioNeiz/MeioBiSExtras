@@ -1,0 +1,24 @@
+{
+  "title": "Meio BiS Extras",
+  "summary": "Forever Leveling BiS tooltips compare without Shift; Alt-click for Wowhead.",
+  "cfCategory": "Quests & Leveling",
+  "cfExtra": [
+    "Tooltip"
+  ],
+  "wagoCategories": [
+    "Quests & Leveling",
+    "Tooltip"
+  ],
+  "gallery": [
+    {
+      "file": "before-after.png",
+      "title": "Before and after",
+      "description": "The Character frame alone, then with each slot's standing for your main spec: BiS, or its % of the best you can get now"
+    },
+    {
+      "file": "settings.png",
+      "title": "Settings",
+      "description": "Esc > Options > AddOns > MeioBiSExtras: slot standing on or off, and the Best in slot source order"
+    }
+  ]
+}

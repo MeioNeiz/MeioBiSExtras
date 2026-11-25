@@ -1,0 +1,16 @@
+## Interface: 16001
+## Title: MeioBiSExtras
+## Notes: Forever Leveling BiS: tooltips always compare, Alt-click for Wowhead, windows come to the front, sources in your order (/bisorder), standing on character slots.
+## Category: Meio
+## IconTexture: Interface\Icons\INV_Chest_Cloth_17
+## AddonCompartmentFunc: MeioBiSExtras_OnAddonCompartmentClick
+## Version: 1.1.0
+## SavedVariables: MeioBiSExtrasDB
+## Author: MeioNeiz
+## X-Website: https://github.com/MeioNeiz/MeioBiSExtras
+## X-License: MIT
+## X-LocalMods-Patches: 61-flbis-source-order 64-flbis-api-verdicts
+## Dependencies: ForeverLevelingBiS
+
+MeioBiSExtras.lua
+Slots.lua

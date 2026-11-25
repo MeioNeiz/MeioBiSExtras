@@ -1,0 +1,69 @@
+Title: Forever Leveling BiS verdicts reachable, its tooltip block can hand over (for MeioTooltipFold)
+Why: the item tooltip block (logo header, boxes, bars, bobbing arrow) doesn't read like the game's
+own tooltip. MeioTooltipFold draws the same verdict as plain lines of the game's tooltip instead, but
+the per-spec verdicts (score, gain, standing, off specs) come from Lines and Verdict, local to
+Tooltip.lua. API.GetVerdicts hands out copies; API.blockOff = true (MeioTooltipFold sets it) stops
+the block on the game's tooltips. The addon's own window keeps its block.
+
+=== FILE ForeverLevelingBiS\Tooltip.lua
+--- OLD
+function Tip.AddBlock(tooltip, id, link, p)
+    p = p or ns.GetPlayer()
+--- NEW
+Tip.Lines = Lines -- LOCAL FIX: for API.GetVerdicts
+
+function Tip.AddBlock(tooltip, id, link, p)
+    p = p or ns.GetPlayer()
+=== END
+
+=== FILE ForeverLevelingBiS\Tooltip.lua
+--- OLD
+    if not (ns.db and ns.charDB) or ns.db.tooltip == false or FromWindow(tooltip) then return end
+--- NEW
+    if not (ns.db and ns.charDB) or ns.db.tooltip == false or FromWindow(tooltip) then return end
+    if ForeverLevelingBiS_API.blockOff then return end -- LOCAL FIX: TooltipFold draws it
+=== END
+
+=== FILE ForeverLevelingBiS\API.lua
+--- OLD
+function API.IsUpgrade(link) return ns.API.IsUpgrade(link) end
+--- NEW
+function API.IsUpgrade(link) return ns.API.IsUpgrade(link) end
+
+-- LOCAL FIX: TooltipFold draws the tooltip block's verdicts as lines of the game's tooltip.
+-- -> main, offs: each { label (the spec's), slotLabel, score, delta, base, empty, worn, have,
+-- unlock, rank, ratio, slots, best, reason, cant, loading, vs, bothHands, laterRank,
+-- laterRatio, laterLabel, laterBest }; nil when not gear
+local VERDICT_FIELDS = { "score", "total", "delta", "base", "empty", "worn", "unlock", "rank",
+    "ratio", "slots", "reason", "cant", "loading", "laterRank", "laterRatio", "laterLabel",
+    "laterBest" }
+
+local function VerdictCopy(v)
+    local r, L = v.r, ns.L
+    local out = { label = v.label, slotLabel = r.label }
+    for _, k in ipairs(VERDICT_FIELDS) do out[k] = r[k] end
+    out.best = r.rank ~= nil and r.rank <= (r.slots or 1) and not r.unlock
+    if v.source == "bags" then
+        out.have = L["Best you have"]
+    elseif type(v.source) == "number" then
+        out.have = string.format(L["In %s"], ns.EquipmentSetInfo(v.source) or "?")
+    else
+        out.have = L["Equipped"]
+    end
+    if r.vs then
+        out.bothHands = #r.vs > 1
+        if not out.bothHands then out.vs = ns.WornItemName(r.vs[1]) end
+    end
+    return out
+end
+
+function API.GetVerdicts(link)
+    local id, itemLink = ItemArgs(link)
+    if not (id and ns.charDB) then return nil end
+    local main, offs = ns.Tooltip.Lines(id, itemLink, ns.GetPlayer())
+    if not main then return nil end
+    local list = {}
+    for i, o in ipairs(offs) do list[i] = VerdictCopy(o) end
+    return VerdictCopy(main), list
+end
+=== END
