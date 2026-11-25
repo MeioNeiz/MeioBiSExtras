@@ -9,6 +9,8 @@
 ## Author: MeioNeiz
 ## X-Website: https://github.com/MeioNeiz/MeioBiSExtras
 ## X-License: MIT
+## X-Curse-Project-ID: 1829457
+## X-Wago-ID: XKqEobKy
 ## X-LocalMods-Patches: 61-flbis-source-order 64-flbis-api-verdicts
 ## Dependencies: ForeverLevelingBiS
 
