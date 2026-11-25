@@ -4,8 +4,9 @@ Forever Leveling BiS's windows easier to use, and its verdicts on your Character
 
 For WoW Forever.
 
-![The Character frame: before, only your gear; with MeioBiSExtras and the patch, each slot
-shows BiS or how close the item is to the best you can get now](docs/before-after.png)
+![Forever Leveling BiS's Best in slot list, the mouse on Death Prophet Spine: before, only
+its tooltip; with Meio BiS Extras, the Healer's Staff you wear beside it, without holding
+Shift](docs/before-after.png)
 
 ## What it does
 
@@ -15,8 +16,7 @@ Works on install, in Forever Leveling BiS's windows:
 - Alt-click an item for its Wowhead Forever link, ready to copy
 - Its window and the Auction House come to the front when you click them
 
-With a small patch to Forever Leveling BiS
-([steps](https://github.com/MeioNeiz/MeioBiSExtras#forever-leveling-bis-patch)):
+With a one-off patch to Forever Leveling BiS (below):
 
 - Open your Character frame and each slot says how your item stands for your main spec:
   BiS, or its % of the best you can get now, in Forever Leveling BiS's colours
@@ -29,6 +29,13 @@ Settings: Esc > Options > AddOns > MeioBiSExtras.
 - `/bisorder reset`: back to BoE, Quest, Dungeon, Crafted
 - `/bisorder settings`: the Settings panel
 - `/bisorder help`: every command
+
+## Forever Leveling BiS
+
+You need [Forever Leveling BiS](https://www.curseforge.com/projects/1719370). Slot standing
+and source order also need a one-off patch to it, run from PowerShell with WoW closed
+([steps](https://github.com/MeioNeiz/MeioBiSExtras#forever-leveling-bis-patch)); everything
+else works without it.
 
 ## Install
 

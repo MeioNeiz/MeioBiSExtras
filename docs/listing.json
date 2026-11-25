@@ -13,7 +13,12 @@
     {
       "file": "before-after.png",
       "title": "Before and after",
-      "description": "The Character frame alone, then with each slot's standing for your main spec: BiS, or its % of the best you can get now"
+      "description": "Forever Leveling BiS's Best in slot list: an item's tooltip alone, then with the item you wear beside it, without holding Shift"
+    },
+    {
+      "file": "slots.png",
+      "title": "Slot standing",
+      "description": "With the patch, each Character frame slot shows BiS or its % of the best you can get now"
     },
     {
       "file": "settings.png",
