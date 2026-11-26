@@ -1,6 +1,7 @@
 # Meio BiS Extras
 
-Forever Leveling BiS's windows easier to use, and its verdicts on your Character frame.
+For Forever Leveling BiS: its tooltips compare without holding Shift, and its verdicts show
+on your Character frame.
 
 For WoW Forever.
 

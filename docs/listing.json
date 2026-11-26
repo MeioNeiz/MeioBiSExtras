@@ -1,6 +1,6 @@
 {
   "title": "Meio BiS Extras",
-  "summary": "Forever Leveling BiS tooltips compare without Shift; Alt-click for Wowhead.",
+  "summary": "Makes Forever Leveling BiS compare without Shift, with verdicts on your Character frame.",
   "cfCategory": "Quests & Leveling",
   "cfExtra": [
     "Tooltip"
