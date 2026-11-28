@@ -1,8 +1,8 @@
-Title: Forever Leveling BiS verdicts reachable, its tooltip block can hand over (for MeioTooltipFold)
+Title: Forever Leveling BiS verdicts reachable, its tooltip block can hand over (for MeioTooltips)
 Why: the item tooltip block (logo header, boxes, bars, bobbing arrow) doesn't read like the game's
-own tooltip. MeioTooltipFold draws the same verdict as plain lines of the game's tooltip instead, but
+own tooltip. MeioTooltips draws the same verdict as plain lines of the game's tooltip instead, but
 the per-spec verdicts (score, gain, standing, off specs) come from Lines and Verdict, local to
-Tooltip.lua. API.GetVerdicts hands out copies; API.blockOff = true (MeioTooltipFold sets it) stops
+Tooltip.lua. API.GetVerdicts hands out copies; API.blockOff = true (MeioTooltips sets it) stops
 the block on the game's tooltips. The addon's own window keeps its block.
 
 === FILE ForeverLevelingBiS\Tooltip.lua

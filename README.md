@@ -16,6 +16,7 @@ Works on install, in Forever Leveling BiS's windows:
 - Item tooltips compare with what you wear, without Shift
 - Alt-click an item for its Wowhead Forever link, ready to copy
 - Its window and the Auction House come to the front when you click them
+- Alt-right-click a Character frame slot for its upgrades and where to get them
 
 With a one-off patch to Forever Leveling BiS (below):
 
@@ -36,7 +37,6 @@ Settings: Esc > Options > AddOns > MeioBiSExtras.
 
 ## Coming soon
 
-- Click a Character slot for where to get its upgrade
 - Works with Forever Leveling BiS 1.5.0
 
 ## Forever Leveling BiS

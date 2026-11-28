@@ -10,7 +10,8 @@
 --     nothing with Alt.
 --   Layering: the window and the Auction House come to the front when clicked.
 --   Source order: Best in slot lists BoE first; /bisorder reorders the sources.
---   Character slots: each worn item's standing on its slot (Slots.lua).
+--   Character slots: each worn item's standing on its slot; Alt+right-click a slot for its
+--     upgrades in FLBiS's window (Slots.lua).
 
 local _, ns = ...
 
@@ -223,7 +224,8 @@ local function RegisterSettings()
     MeioBiSExtrasDB, Settings.VarType.Boolean, "Slot standing", true)
   slots:SetValueChangedCallback(function() ns.RefreshSlots() end)
   Settings.CreateCheckbox(category, slots, "Each worn item's standing for your main spec on its"
-    .. " slot: BiS, or its % of the best you can get now, in My gear's colours.")
+    .. " slot: BiS, or its % of the best you can get now, in My gear's colours. Alt-right-click"
+    .. " a slot for its upgrades and where to get them.")
   if header then
     layout:AddInitializer(header("Best in slot source order", "The order of the source lists"
       .. " on Forever Leveling BiS's Best in slot tab. A change shows after /reload."))
